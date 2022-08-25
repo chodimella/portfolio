@@ -1,1 +1,85 @@
-/* You can add global styles to this file, and also import other style files */
+/* ----------------- GLOBAL STYLING ----------------- */
+
+/* ----------------- TEXT STYLING ----------------- */
+
+h1{
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+
+  margin-bottom: 0;
+
+  color: #040707;
+}
+
+h2{
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+
+  color: #040707;
+}
+
+h3{
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+
+  color: #040707;
+}
+
+p{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+
+  color: #040707;
+}
+
+body{
+  margin: 0;
+}
+
+.fancy{
+  font-style: italic;
+}
+
+/* LINKS */
+
+.in-text-link{
+  color: #040707;
+  text-decoration-color: #040707;
+
+  transition: all 0.4s;
+}
+
+.in-text-link:hover{
+  color: #b22222;
+  text-decoration-color: #b22222;
+}
+
+/* LISTS */
+
+ul{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+
+  padding: 0;
+  list-style: none;
+}
+
+/* ----------------- HOME PAGE CLASSES ----------------- */
+
+.wrapper{
+  margin: 0;
+  padding: 2rem;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: #F5F5F5;
+
+  display: flex;
+  flex-direction: column;
+}

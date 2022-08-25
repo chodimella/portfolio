@@ -1,0 +1,165 @@
+:host {
+  /* display: flex; */
+  /* flex-grow: 1; */
+}
+
+nav{
+  background-color: #040707;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.menu, .submenu {
+  list-style-type: none;
+}
+
+.logo img{
+  width: 5em;
+}
+
+.item {
+  padding: 10px;
+}
+
+.item:not(.button) a:hover, .item a:hover::after{
+  color: #b22222; /* adjust */
+}
+
+/* ----------------- MOBILE MENU ----------------- */
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li a {
+  display: block;
+  /* padding: 15px 5px; */
+}
+
+.menu li .subitem a {
+  /* padding: 10px; */
+}
+
+.toggle {
+  order: 1;
+  font-size: 20px;
+  padding-right: 1rem;
+}
+
+.item {
+  order: 2;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.active .item {
+  display: block;
+}
+
+/* SUBMENU */
+
+.submenu{
+  display: none;
+}
+
+.submenu-active .submenu {
+  display: block;
+}
+
+.has-submenu > a::after {
+  font-family: "Font Awesome 6 Free";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  content: "\f107";
+  color: #040707;
+  padding-left: 5px;
+}
+
+.submenu-active a:focus {
+  color: white;
+}
+
+.subitem a {
+  padding: 10px 15px;
+}
+
+.submenu-active {
+  background-color: #161616;
+  border-radius: 3px;
+}
+
+/* ----------------- MEDIA QUERIES ----------------- */
+
+/* Tablet */
+
+@media all and (min-width: 700px){
+  .menu {
+      justify-content: center;
+  }
+
+  .logo {
+      flex: 1;
+  }
+
+  .logo img{
+      width: 6em;
+  }
+
+  .toggle {
+      flex: 1;
+      text-align: right;
+      order: 1;
+  }
+}
+
+/* Desktop */
+
+@media all and (min-width: 769px){
+  nav{
+      background: none;
+  }
+
+  nav a {
+      color: #040707;
+  }
+
+  .logo img{
+      width: 7em;
+  }
+
+  .item {
+      order: 1;
+      position: relative;
+      display: block;
+      width: auto;
+  }
+
+  .submenu-active .submenu{
+      display: block;
+      position: absolute;
+      left: 0;
+      /* top: 68px; */
+      background-color: #040707;
+  }
+
+  .subitem a {
+      color: white;
+  }
+
+  .toggle{
+      display: none;
+  }
+
+  .submenu-active {
+      border-radius: 0;
+  }
+}

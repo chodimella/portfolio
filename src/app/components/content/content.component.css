@@ -1,0 +1,168 @@
+:host {
+  display: flex;
+  flex-grow: 8;
+}
+
+/* ----------------- CONTENT DIV CLASSES ----------------- */
+
+.content-div{
+  width: 100%;
+  /* max-height: 80%; */
+  padding: 3rem 7rem 3rem 7rem;
+  flex-grow: 8;
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+/* ----------------- LEFT CONTENT DIV CLASSES ----------------- */
+
+.content-left{
+  width: 50%;
+  /* height: 100%; */
+  /* max-height: 50%; */
+
+  margin-right: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.intro-text{
+  margin: 0 0 2em 0;
+
+  flex-grow: 3;
+}
+
+.intro-text h1{
+  font-size: 3rem;
+}
+
+.home-about-link{
+  font-size: 1.5rem;
+}
+
+.home-about-link a{
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: black;
+
+  transition: all 0.4s;
+}
+
+.home-about-link a:hover{
+  color: red;
+  text-decoration-color: #F5F5F5;
+}
+
+/* ----------------- RIGHT CONTENT DIV CLASSES ----------------- */
+
+.content-right{
+  width: 50%;
+  height: 100%;
+  /* max-height: 50%; */
+
+  margin-left: 2rem;
+
+  /* background-image: url("../assets/img/home/home-banner.png"); */
+
+  display: flex;
+  justify-content: center;
+}
+
+.home-bg{
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../assets/img/home/home-image.jpg");
+  background-size: cover;
+  background-position-y: 10%;
+  background-position-x: 25%;
+
+  filter: grayscale(100%);
+  transition: all 0.8s;
+}
+
+.home-bg:hover{
+  filter: grayscale(0%);
+}
+
+.content-right img{
+  min-width: 50%;
+  height: 100%;
+  object-fit: contain;
+
+  filter: grayscale(100%);
+  transition: all 0.8s;
+}
+
+.content-right img:hover{
+  filter: grayscale(0%);
+}
+
+.link-div{
+  width: 100%;
+  height: 100%;
+}
+
+/* ----------------- MEDIA QUERIES ----------------- */
+
+/* Laptop */
+
+@media all and (max-width: 1024px){
+  .content-div{
+      padding: 2rem 5rem 2rem 5rem;
+  }
+}
+
+/* Tablet */
+
+@media all and (max-width: 769px){
+  .wrapper {
+      padding: 0;
+  }
+
+  .content-div {
+      padding: 0.5rem 1rem 0 1rem;
+  }
+
+  .content-left{
+      margin-right: 1rem;
+  }
+
+  .content-right{
+      margin-left: 1rem;
+  }
+
+  .home-bg{
+      background-position-x: 50%;
+  }
+}
+
+/* Mobile */
+
+@media all and (max-width: 375px){
+  .content-div {
+      padding-top: 0;
+      flex-wrap: wrap;
+      overflow-x: auto;
+  }
+
+  .content-left {
+      width: 100%;
+      margin-right: 0;
+      order: 2;
+  }
+
+  .content-right {
+      width: 100%;
+      height: 50%;
+      margin-left: 0;
+      order: 1;
+  }
+
+  .home-bg {
+      filter: grayscale(0%);
+  }
+}
